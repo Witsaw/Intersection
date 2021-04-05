@@ -24,6 +24,7 @@ public class Intersection{
 
     private int cardelay[];
 
+    @SuppressWarnings("unchecked")
     public Intersection(int duration){
         time = 0;
         max = duration;
@@ -38,6 +39,7 @@ public class Intersection{
         }
     }
 
+    @SuppressWarnings({ "unchecked", "rawtypes" })
     public void addTraffic(Queue[] streets, int time){
         for(int i = 0; i < streets.length; i++){
             if(Math.random() < PERCENT){

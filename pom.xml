@@ -14,6 +14,7 @@
 
     <properties>
         <!-- https://maven.apache.org/general.html#encoding-warning -->
+        <exec.mainClass>com.wilchen.intersection.Simulator</exec.mainClass>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -59,7 +60,11 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+            </plugin>
             <!--
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
